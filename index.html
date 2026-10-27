@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мой VPN — безопасное соединение в любой сети</title>
+<meta name="description" content="VPN шифрует трафик между вашим устройством и сервером и скрывает ваш IP-адрес от сайтов.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f2f5f7;--ink:#0f1b24;--mute:#4d5d69;--line:#d3dce2;--accent:#0b6e6e;--on-accent:#fff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1519;--ink:#e5edf1;--mute:#98a9b4;--line:#25323b;--accent:#5fc4c0;--on-accent:#0e1519;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:44rem;margin:0 auto;padding:1.5rem 1.5rem 3rem}
+.brand{font-weight:700;font-size:1.15rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.hero{padding:3.5rem 0 3rem}
+h1{font-size:clamp(2.1rem,7.5vw,3.4rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 1rem}
+.lead{color:var(--mute);max-width:34rem;margin:0}
+.tunnel{display:block;width:100%;max-width:30rem;height:auto;margin-top:2rem}
+.tunnel text{fill:var(--mute);font-size:13px;font-family:inherit}
+.tunnel circle{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.tunnel .enc{stroke:var(--accent);stroke-width:8;stroke-linecap:round}
+.tunnel .plain{stroke:var(--mute);stroke-width:2;stroke-linecap:round;stroke-dasharray:2 6}
+.btn{display:inline-block;margin-top:1.75rem;padding:.75rem 1.4rem;background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none;border-radius:.5rem}
+.btn:hover{filter:brightness(1.1)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.row{display:grid;grid-template-columns:11rem 1fr;gap:1rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.row h2{font-size:1rem;margin:0;color:var(--accent)}
+.row p,.row ol{margin:0}
+.row ol{padding-left:1.25rem}
+.row li+li{margin-top:.5rem}
+summary{cursor:pointer;font-weight:600;padding:.25rem 0}
+details p{margin:.25rem 0 1rem;color:var(--mute)}
+footer{padding-top:2rem;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem}
+@media (max-width:34rem){.row{grid-template-columns:1fr;gap:.5rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">Мой VPN</div>
+
+  <header class="hero">
+    <h1>Безопасное соединение в любой сети</h1>
+    <p class="lead">VPN шифрует трафик между вашим устройством и сервером и скрывает ваш IP-адрес от сайтов, которые вы открываете.</p>
+    <svg class="tunnel" viewBox="0 0 360 120" role="img" aria-label="Схема: трафик от вашего устройства до VPN-сервера зашифрован, сайт видит IP-адрес сервера">
+      <line class="enc" x1="40" y1="50" x2="180" y2="50"/>
+      <line class="plain" x1="180" y1="50" x2="320" y2="50"/>
+      <circle cx="40" cy="50" r="9"/><circle cx="180" cy="50" r="9"/><circle cx="320" cy="50" r="9"/>
+      <text x="110" y="30" text-anchor="middle">зашифровано</text>
+      <text x="250" y="30" text-anchor="middle">виден IP сервера</text>
+      <text x="40" y="92" text-anchor="middle">Вы</text>
+      <text x="180" y="92" text-anchor="middle">VPN-сервер</text>
+      <text x="320" y="92" text-anchor="middle">Сайт</text>
+    </svg>
+    <a class="btn" href="#steps">Как подключиться</a>
+  </header>
+
+  <section class="row"><h2>Публичный Wi-Fi</h2><p>В кафе, аэропорту или отеле владелец сети не видит, какие сайты вы открываете: трафик зашифрован до VPN-сервера.</p></section>
+  <section class="row"><h2>Скрытый IP-адрес</h2><p>Сайты видят адрес VPN-сервера, а не ваш домашний IP.</p></section>
+  <section class="row"><h2>Интернет-провайдер</h2><p>Провайдер видит только соединение с VPN-сервером, а не то, что передаётся внутри него.</p></section>
+
+  <section class="row" id="steps">
+    <h2>Как подключиться</h2>
+    <ol>
+      <li>Создайте аккаунт.</li>
+      <li>Установите приложение на телефон или компьютер.</li>
+      <li>Нажмите «Подключиться» и выберите сервер.</li>
+    </ol>
+  </section>
+
+  <section class="row">
+    <h2>Частые вопросы</h2>
+    <div>
+      <details><summary>VPN делает меня полностью анонимным?</summary><p>Нет. VPN шифрует трафик до сервера и скрывает ваш IP-адрес, но не защищает от слежения через аккаунты и cookies, если вы входите в сервисы под своим именем.</p></details>
+      <details><summary>VPN замедляет интернет?</summary><p>Может немного: трафик идёт через дополнительный сервер. Скорость зависит от удалённости сервера и качества вашего соединения.</p></details>
+    </div>
+  </section>
+
+  <footer>© 2026 Мой VPN</footer>
+</div>
+</body>
+</html>
